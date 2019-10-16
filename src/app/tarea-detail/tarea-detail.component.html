@@ -1,0 +1,21 @@
+<div *ngIf="tarea">
+
+  <h2>{{tarea.nombre | uppercase}} Detalles</h2>
+  <div><span>id: </span>{{tarea.id}}</div>
+  <div>
+    <label>Nombre:
+      <input [(ngModel)]="tarea.nombre" placeholder="nombre"/>
+    </label>
+  </div>
+  <div>
+    <label>Descripcion:
+      <input [(ngModel)]="tarea.descripcion" placeholder="descripcion"/>
+    </label>
+  </div>
+  <div>
+    <label>Terminado:
+      <input type="checkbox" checked placeholder="terminado"/>
+    </label>
+  </div>
+
+</div>

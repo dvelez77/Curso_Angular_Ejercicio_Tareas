@@ -1,0 +1,32 @@
+
+
+<table id="tblCabecera" class="blueTable">
+  <tr>
+    <td>NOMBRE</td>
+    <td>DESCRIPCION</td>
+    <td>TERMINADO</td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr *ngFor="let tarea of tareas">
+    <td>{{tarea.nombre}}</td>
+    <td>{{tarea.descripcion}}</td>
+    <td><input type="checkbox" id="chkTerminado" checked='{{tarea.terminado}}'/></td>
+    <td><button type="button" id="btnEditar" (click)="onEditar(tarea)">Editar</button>{{clickMessage}}</td>
+    <td><button type="button" id="btnBorrar">Borrar</button></td>
+  </tr>
+</table>
+<app-tarea-detail [tarea]="selectedTarea"></app-tarea-detail>
+
+
+<!--<div *ngIf="selectedTarea">
+
+  <h2>{{selectedTarea.nombre | uppercase}} Detalles</h2>
+  <div><span>id: </span>{{selectedTarea.id}}</div>
+  <div>
+    <label>Nombre:
+      <input [(ngModel)]="selectedTarea.nombre" placeholder="nombre"/>
+    </label>
+  </div>
+
+</div>-->
