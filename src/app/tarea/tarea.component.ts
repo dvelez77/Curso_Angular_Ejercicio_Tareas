@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Tarea } from '../tarea';
 
 import { TAREAS } from '../mock-tarea';
+import { TareaService } from '../tarea.service';
 
 @Component({
   selector: 'app-tarea',
@@ -10,16 +11,21 @@ import { TAREAS } from '../mock-tarea';
 })
 export class TareaComponent implements OnInit {
 
-  tareas = TAREAS;
+  tareas: Tarea[];
   selectedTarea: Tarea;
 
-  constructor() { }
+  constructor(private tareaService: TareaService) { }
 
   ngOnInit() {
+    this.getTareas();
   }
 
   onEditar(tarea: Tarea): void {
      this.selectedTarea = tarea;
+  }
+
+  getTareas(): void {
+    this.tareas = this.tareaService.getTareas();
   }
 
 }
