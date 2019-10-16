@@ -12,7 +12,6 @@ export class TareaComponent implements OnInit {
 
   tareas = TAREAS;
   selectedTarea: Tarea;
-  clickMessage = 'mensaje inicio';
 
   constructor() { }
 
@@ -21,7 +20,6 @@ export class TareaComponent implements OnInit {
 
   onEditar(tarea: Tarea): void {
      this.selectedTarea = tarea;
-    //this.clickMessage = 'You are my hero!';
   }
 
 }

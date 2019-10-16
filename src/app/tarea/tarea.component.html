@@ -12,11 +12,11 @@
     <td>{{tarea.nombre}}</td>
     <td>{{tarea.descripcion}}</td>
     <td><input type="checkbox" id="chkTerminado" checked='{{tarea.terminado}}'/></td>
-    <td><button type="button" id="btnEditar" (click)="onEditar(tarea)">Editar</button>{{clickMessage}}</td>
+    <td><button type="button" id="btnEditar" routerLink="/detail/{{tarea.id}}">Editar</button></td>
     <td><button type="button" id="btnBorrar">Borrar</button></td>
   </tr>
 </table>
-<app-tarea-detail [tarea]="selectedTarea"></app-tarea-detail>
+<!--<app-tarea-detail [tarea]="selectedTarea"></app-tarea-detail>-->
 
 
 <!--<div *ngIf="selectedTarea">
