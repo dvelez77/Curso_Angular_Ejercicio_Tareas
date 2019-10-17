@@ -25,7 +25,8 @@ export class TareaComponent implements OnInit {
   }
 
   getTareas(): void {
-    this.tareas = this.tareaService.getTareas();
+    this.tareaService.getTareas()
+        .subscribe(tareas => this.tareas = tareas);
   }
 
 }

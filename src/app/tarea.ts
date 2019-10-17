@@ -4,3 +4,6 @@ export class Tarea {
     descripcion: string;
     terminado: number;
 }
+
+
+

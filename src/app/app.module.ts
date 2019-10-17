@@ -8,13 +8,15 @@ import { TareaDetailComponent } from './tarea-detail/tarea-detail.component';
 import { AppRoutingModule } from './app-routing.module';
 
 import { HttpClientModule } from '@angular/common/http';
+import { MessagesComponent } from './messages/messages.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     TareaComponent,
-    TareaDetailComponent
+    TareaDetailComponent,
+    MessagesComponent
   ],
   imports: [
     BrowserModule,

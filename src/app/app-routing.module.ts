@@ -4,6 +4,7 @@ import { TareaComponent } from './tarea/tarea.component';
 import { TareaDetailComponent } from './tarea-detail/tarea-detail.component';
 
 const routes: Routes = [
+  { path: '', redirectTo: 'tareas', pathMatch: 'full'},
   { path: 'tareas', component: TareaComponent },
   { path: 'detail/:id', component: TareaDetailComponent }
 ];

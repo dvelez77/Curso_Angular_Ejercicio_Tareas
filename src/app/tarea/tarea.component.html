@@ -1,6 +1,7 @@
 
 
 <table id="tblCabecera" class="blueTable">
+<thead>
   <tr>
     <td>NOMBRE</td>
     <td>DESCRIPCION</td>
@@ -8,6 +9,8 @@
     <td></td>
     <td></td>
   </tr>
+</thead>
+<tbody>
   <tr *ngFor="let tarea of tareas">
     <td>{{tarea.nombre}}</td>
     <td>{{tarea.descripcion}}</td>
@@ -15,6 +18,7 @@
     <td><button type="button" id="btnEditar" routerLink="/detail/{{tarea.id}}">Editar</button></td>
     <td><button type="button" id="btnBorrar">Borrar</button></td>
   </tr>
+</tbody>
 </table>
 <!--<app-tarea-detail [tarea]="selectedTarea"></app-tarea-detail>-->
 
